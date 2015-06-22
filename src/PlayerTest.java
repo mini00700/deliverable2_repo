@@ -7,12 +7,19 @@ import static org.mockito.Mockito.*;
 public class PlayerTest {
 
 	@Test
-	public void drinktest() {
-		Player p = mock(Player.class);
+	public void testDrink() {
+		Player p = new Player(true,true,true);
 		
 		boolean result=p.drink();
-		System.out.println(result);
 		assertEquals(result,true);
+	}
+	
+	@Test
+	public void testHasallitem() {
+		Player p = new Player(true,false,true);
+		
+		boolean result=p.hasAllItems();
+		assertEquals(result,false);
 	}
 
 }

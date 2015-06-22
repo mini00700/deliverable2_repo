@@ -18,5 +18,14 @@ public class RoomTest {
 		String result2 = r.getDescription();
 		assertEquals(result2,"what");
 	}
+	
+	@Test
+	public void testHasExist() {
+		Room r = new Room(true, false, true,false,true);
+		boolean result1 = r.northExit();
+		boolean result2 = r.southExit();
+		assertEquals(result1,false);
+		assertEquals(result2,true);
+	}
 
 }
