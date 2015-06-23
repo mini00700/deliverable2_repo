@@ -28,7 +28,8 @@ public class HouseTest {
 		rooms[1]=r2;
 		House h = new House(rooms);
 		Room[] result = h.generateRooms(1);
-		assertEquals(result,"what");
+		Room r = mock(Room.class);
+		assertEquals(result,r);
 	}
 
 }
