@@ -6,6 +6,7 @@ import static org.mockito.Mockito.*;
 
 public class PlayerTest {
 
+	//Player can drink.
 	@Test
 	public void testDrink() {
 		Player p = new Player(true,true,true);
@@ -13,6 +14,7 @@ public class PlayerTest {
 		boolean result=p.drink();
 		assertEquals(result,true);
 	}
+	
 	
 	@Test
 	public void testHasallitem() {
