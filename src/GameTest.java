@@ -85,7 +85,7 @@ public class GameTest {
 		assertEquals(result, 0);
 	}
 
-    //Player can enter a command not specified by FUN-ITERATION.
+	//Player can enter a command not specified by FUN-ITERATION.
 	@Test
 	public void testUnknownCommand(){
 		Player p = mock (Player.class);
