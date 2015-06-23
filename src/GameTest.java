@@ -71,5 +71,16 @@ public class GameTest {
 		verify(h,times(1)).look(p, null);
 		assertEquals(result,0);
 	}
+	
+	@Test
+	public void testHelp() {
+		Player p = mock (Player.class);
+		House h = mock (House.class);
+		Game g= new Game(p,h);
+		
+		
+		int result = g.doSomething("H");
+		assertEquals(result,0);
+	}
 
 }
