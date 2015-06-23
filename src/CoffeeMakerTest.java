@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class CoffeeMakerTest {
 
+	//This tests coffee maker can officially run.
 	@Test
 	public void testRunArgs() {
 		CoffeeMaker cm = new CoffeeMaker();

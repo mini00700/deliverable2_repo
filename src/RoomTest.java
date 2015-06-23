@@ -16,7 +16,7 @@ public class RoomTest {
 	public void testGetdescription() {
 		Room r = new Room(true, false, true,true,true);
 		String result2 = r.getDescription();
-		assertEquals(result2,"what");
+		assertEquals(result2,"nothing");
 	}
 	
 	@Test

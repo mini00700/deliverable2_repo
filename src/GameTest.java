@@ -7,6 +7,7 @@ import static org.mockito.Mockito.*;
 
 public class GameTest {
 
+	//Player can move to the north room.
 	@Test
 	public void testMoveNorth() {
 		Player p = mock (Player.class);
@@ -20,6 +21,7 @@ public class GameTest {
 		assertEquals(result,0);
 	}
 	
+	//When player collect all the inventories, he/she will win the game
 	@Test
 	public void testDrink1() {
 		Player p = mock (Player.class);
@@ -33,6 +35,7 @@ public class GameTest {
 		assertEquals(result,1);
 	}
 	
+	//When player cannot collect all the inventories, he/she will lose the game
 	@Test
 	public void testDrink2() {
 		Player p = mock (Player.class);
@@ -46,6 +49,7 @@ public class GameTest {
 		assertEquals(result,-1);
 	}
 	
+	//Player can move to the south room.
 	@Test
 	public void testMoveSouth() {
 		Player p = mock (Player.class);
@@ -59,6 +63,7 @@ public class GameTest {
 		assertEquals(result,0);
 	}
 	
+	//Player can see the list of inventory.
 	@Test
 	public void testInventory() {
 		Player p = mock (Player.class);
@@ -72,6 +77,7 @@ public class GameTest {
 		assertEquals(result,0);
 	}
 	
+	//Player can look the content in the particular room.
 	@Test
 	public void testLook() {
 		Player p = mock (Player.class);
@@ -85,6 +91,7 @@ public class GameTest {
 		assertEquals(result,0);
 	}
 	
+	//Player can get the help through the game.
 	@Test
 	public void testHelp() {
 		Player p = mock (Player.class);
