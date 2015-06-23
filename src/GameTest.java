@@ -20,7 +20,7 @@ public class GameTest {
 		assertEquals(result,0);
 	}
 
-	//Player can treat "n" the same as "N" and move to the north room.
+	//Player should treat "n" the same as "N" and move to the north room.
 	@Test
 	public void testMoveNorthIgnoreCase(){
 		Player p = mock (Player.class);
@@ -72,7 +72,7 @@ public class GameTest {
 		assertEquals(result,0);
 	}
 
-	//Player can treat "s" the same as "S" and move to the south room.
+	//Player should treat "s" the same as "S" and move to the south room.
 	@Test
 	public void testMoveSouthIgnoreCase(){
 		Player p = mock (Player.class);
