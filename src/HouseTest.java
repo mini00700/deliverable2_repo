@@ -21,16 +21,13 @@ public class HouseTest {
 	
 	@Test
 	public void testGeneraterooms() {
-		Room r1 = mock(Room.class);
-		Room r2 = mock(Room.class);
-		Room[] rooms = new Room[2];
-		rooms[0]=r1;
-		rooms[1]=r2;
-		House h = new House(rooms);
-		Room[] result = h.generateRooms(1);
-		Room r = mock(Room.class);
-		assertEquals(result,r);
+		House h = new House(1);
+		Room[] rooms = h.generateRooms(3);
+		assertNotNull(rooms);
 	}
 
 }
+  
+
+
   
