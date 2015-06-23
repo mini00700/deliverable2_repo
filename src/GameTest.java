@@ -14,11 +14,23 @@ public class GameTest {
 		House h = mock (House.class);
 		Game g= new Game(p,h);
 		
-		
 		int result = g.doSomething("N");
 		
-		verify(h,times(1)).moveNorth();;;
+		verify(h,times(1)).moveNorth();
 		assertEquals(result,0);
+	}
+
+	//Player can treat "n" the same as "N" and move to the north room.
+	@Test
+	public void testMoveNorthIgnoreCase(){
+		Player p = mock (Player.class);
+		House h = mock (House.class);
+		Game g = new Game(p, h);
+		
+		int result = g.doSomething("n");
+		
+		verify(h,times(1)).moveNorth();
+		assertEquals(result, 0);
 	}
 	
 	//When player collect all the inventories, he/she will win the game
@@ -30,7 +42,6 @@ public class GameTest {
 		when(p.drink()).thenReturn(true);
 		
 		int result = g.doSomething("D");
-		
 		
 		assertEquals(result,1);
 	}
@@ -45,7 +56,6 @@ public class GameTest {
 		
 		int result = g.doSomething("D");
 		
-		
 		assertEquals(result,-1);
 	}
 	
@@ -56,11 +66,23 @@ public class GameTest {
 		House h = mock (House.class);
 		Game g= new Game(p,h);
 		
-		
 		int result = g.doSomething("S");
 		
 		verify(h,times(1)).moveSouth();
 		assertEquals(result,0);
+	}
+
+	//Player can treat "s" the same as "S" and move to the south room.
+	@Test
+	public void testMoveSouthIgnoreCase(){
+		Player p = mock (Player.class);
+		House h = mock (House.class);
+		Game g = new Game(p, h);
+		
+		int result = g.doSomething("s");
+		
+		verify(h,times(1)).moveSouth();
+		assertEquals(result, 0);
 	}
 	
 	//Player can see the list of inventory.
@@ -73,7 +95,7 @@ public class GameTest {
 		
 		int result = g.doSomething("I");
 		
-		verify(p,times(1)).showInventory();;;
+		verify(p,times(1)).showInventory();
 		assertEquals(result,0);
 	}
 	
@@ -83,7 +105,6 @@ public class GameTest {
 		Player p = mock (Player.class);
 		House h = mock (House.class);
 		Game g= new Game(p,h);
-		
 		
 		int result = g.doSomething("L");
 		
@@ -97,7 +118,6 @@ public class GameTest {
 		Player p = mock (Player.class);
 		House h = mock (House.class);
 		Game g= new Game(p,h);
-		
 		
 		int result = g.doSomething("H");
 		assertEquals(result,0);
