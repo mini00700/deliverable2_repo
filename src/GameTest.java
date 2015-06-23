@@ -84,6 +84,18 @@ public class GameTest {
 		verify(h,times(1)).moveSouth();
 		assertEquals(result, 0);
 	}
+
+    //Player can enter a command not specified by FUN-ITERATION.
+	@Test
+	public void testUnknownCommand(){
+		Player p = mock (Player.class);
+		House h = mock (House.class);
+		Game g = new Game(p, h);
+		
+		int result = g.doSomething("abcdefg");
+		
+		assertEquals(result, 0);
+	}
 	
 	//Player can see the list of inventory.
 	@Test
