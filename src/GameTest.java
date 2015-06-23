@@ -21,15 +21,28 @@ public class GameTest {
 	}
 	
 	@Test
-	public void testDrink() {
+	public void testDrink1() {
 		Player p = mock (Player.class);
 		House h = mock (House.class);
 		Game g= new Game(p,h);
-		
+		when(p.drink()).thenReturn(true);
 		
 		int result = g.doSomething("D");
 		
-		verify(p,times(1)).drink();;
+		
+		assertEquals(result,1);
+	}
+	
+	@Test
+	public void testDrink2() {
+		Player p = mock (Player.class);
+		House h = mock (House.class);
+		Game g= new Game(p,h);
+		when(p.drink()).thenReturn(false);
+		
+		int result = g.doSomething("D");
+		
+		
 		assertEquals(result,-1);
 	}
 	
