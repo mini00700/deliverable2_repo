@@ -18,6 +18,18 @@ public class HouseTest {
 		String result = h.getCurrentRoomInfo();
 		assertEquals(result,"Test");
 	}
+	
+	@Test
+	public void testGeneraterooms() {
+		Room r1 = mock(Room.class);
+		Room r2 = mock(Room.class);
+		Room[] rooms = new Room[2];
+		rooms[0]=r1;
+		rooms[1]=r2;
+		House h = new House(rooms);
+		Room[] result = h.generateRooms(1);
+		assertEquals(result,"what");
+	}
 
 }
   
