@@ -12,6 +12,7 @@ public class RoomTest {
 		assertEquals(result1,true);
 	}
 	
+	
 	//Player can get room information.
 	@Test
 	public void testGetdescription() {
@@ -30,7 +31,7 @@ public class RoomTest {
 		assertEquals(result2,true);
 	}
 	
-	//Player can know whether the room has suger.
+	//Player can know whether the room has sugar.
 	@Test
 	public void testHasSugar() {
 		Room r = new Room(true, true, true,true,true);
